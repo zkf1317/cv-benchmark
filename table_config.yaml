@@ -1,0 +1,44 @@
+#  model information
+#  - name: model name, used for display
+#    task: model task, used for display
+#    input_size: input size, used for display
+#    folder: which folder the model located in, used for jumping to model detail
+#    acceptable_time: maximum acceptable inference time, large ones will be marked red
+#    keyword: used to specify this model from all benchmark results
+#
+#  device information
+#  - name: full device name used to identify the device block, and jump to device detail
+#    display_info: device information for display
+#    platform: used to identify benchmark result of specific platform
+#
+#  suffix information
+#  - model: which model
+#    device: which device
+#    suffix: this suffix will be appended to end of this text
+
+Models:
+  - name: "YOLOX"
+    task: "Object Detection"
+    input_size: "640x640"
+    folder: "object_detection_yolox"
+    acceptable_time: 2800
+    keyword: "object_detection_yolox"
+
+Devices:
+  - name: "Intel 12700K"
+    display_info: "Intel\n12700K\nCPU"
+    platform: "CPU"
+
+  - name: "Atlas 200I DK A2"
+    display_info: "Atlas 200I DK A2\nAscend 310B\nCPU"
+    platform: "CPU"
+
+  - name: "Raspberry Pi 4B"
+    display_info: "Raspberry Pi 4B\nBCM2711\nCPU"
+    platform: "CPU"
+
+  - name: "Atlas 200I DK A2"
+    display_info: "Atlas 200 DK\nAscend 310\nNPU"
+    platform: "NPU (CANN)"
+
+Suffixes:
