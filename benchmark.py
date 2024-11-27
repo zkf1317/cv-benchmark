@@ -200,12 +200,13 @@ if __name__ == '__main__':
                 _model_paths += model_paths['fp32']
             if args.fp16:
                 _model_paths += model_paths['fp16']
-            if args.int8:
-                _model_paths += model_paths['int8']
-            if args.int8bq:
-                _model_paths += model_paths['int8bq']
+            # if args.int8:
+            #     _model_paths += model_paths['int8']
+            # if args.int8bq:
+            #     _model_paths += model_paths['int8bq']
         else:
-            _model_paths = model_paths['fp32'] + model_paths['fp16'] + model_paths['int8'] + model_paths["int8bq"]
+            # _model_paths = model_paths['fp32'] + model_paths['fp16'] + model_paths['int8'] + model_paths["int8bq"]
+            _model_paths = model_paths['fp32'] + model_paths['fp16']
         # filter out excluded models
         excludes = []
         if args.model_exclude is not None:

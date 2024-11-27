@@ -30,8 +30,8 @@ python benchmark.py --all
 python benchmark.py --all --fp32
 
 # All configs but exclude some of them (fill with config name keywords, not sensitive to upper/lower case, seperate with colons)
-python benchmark.py --all --cfg_exclude wechat
-python benchmark.py --all --cfg_exclude wechat:crnn
+python benchmark.py --all --cfg_exclude YoutuReID
+python benchmark.py --all --cfg_exclude YuNet:YoutuReID
 
 # All configs but exclude some of the models (fill with exact model names, sensitive to upper/lower case, seperate with colons)
 python benchmark.py --all --model_exclude license_plate_detection_lpd_yunet_2023mar_int8.onnx:human_segmentation_pphumanseg_2023mar_int8.onnx

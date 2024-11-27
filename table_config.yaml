@@ -17,6 +17,13 @@
 #    suffix: this suffix will be appended to end of this text
 
 Models:
+  - name: "YuNet"
+    task: "Face Detection"
+    input_size: "160x120"
+    folder: "face_detection_yunet"
+    acceptable_time: 50
+    keyword: "face_detection_yunet"
+
   - name: "YOLOX"
     task: "Object Detection"
     input_size: "640x640"
