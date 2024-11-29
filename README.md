@@ -43,7 +43,11 @@ python benchmark.py --all --cfg_overwrite_backend_target 1
 python benchmark_custom.py --all
 ```
 
-
+- Test All
+```shell
+# CPU inference test
+bash benchmark.sh CPU
+```
 
 **Windows**:
 - Test OpenCV
