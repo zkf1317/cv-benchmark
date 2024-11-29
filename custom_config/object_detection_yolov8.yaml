@@ -1,0 +1,18 @@
+Benchmark:
+  name: "Object Detection Benchmark"
+  type: "Detection"
+  data:
+    path: "data/object_detection"
+    files: ["1.png", "2.png", "3.png"]
+    sizes:
+      - [640, 640]
+  metric:
+    warmup: 30
+    repeat: 10
+  backend: "default"
+  target: "cpu"
+
+Model:
+  name: "YoloV8"
+  conf_thres: 0.7
+  iou_thres: 0.5

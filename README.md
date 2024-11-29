@@ -16,10 +16,8 @@ Data for benchmarking will be downloaded and loaded in [data](./data) based on g
 ## Benchmarking
 
 **Linux**:
-
+- Test OpenCV
 ```shell
-export PYTHONPATH=$PYTHONPATH:.. 
-
 # Single config
 python benchmark.py --cfg ./config/face_detection_yunet.yaml
 
@@ -40,18 +38,27 @@ python benchmark.py --all --model_exclude license_plate_detection_lpd_yunet_2023
 python benchmark.py --all --cfg_overwrite_backend_target 1
 ```
 
-**Windows**:
-- CMD
-    ```shell
-    set PYTHONPATH=%PYTHONPATH%;..
-    python benchmark.py --cfg ./config/face_detection_yunet.yaml
-    ```
+- Test Custom Model
+```shell
+python benchmark_custom.py --all
+```
 
-- PowerShell
-    ```shell
-    $env:PYTHONPATH=$env:PYTHONPATH+";.."
-    python benchmark.py --cfg ./config/face_detection_yunet.yaml
-    ```
+
+
+**Windows**:
+- Test OpenCV
+```shell
+python benchmark.py --cfg ./config/face_detection_yunet.yaml
+```
+- Test Custom Model
+```shell
+python benchmark_custom.py --cfg ./custom_config/object_detection_yolov8.yaml
+```
+- Test All
+```shell
+# CPU inference test
+benchmark.bat CPU
+```
 
 ## Detailed Results
 

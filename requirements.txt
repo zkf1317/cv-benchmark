@@ -3,3 +3,5 @@ opencv-python<5.0
 pyyaml
 requests
 matplotlib>=3.7.1
+onnx>=1.17.0
+onnxruntime==1.19.2
