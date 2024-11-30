@@ -1,6 +1,8 @@
 # Computer Vision Benchmark
 
-Benchmarking the speed of DNN inferring different models in the zoo. Result of each model includes the time of its preprocessing, inference and postprocessing stages.
+Benchmarking the speed of DNN inferring different models in the opencv zoo or your own models added to the 'custom_models' directory.
+
+Result of each model includes the time of its preprocessing, inference and postprocessing stages.
 
 Data for benchmarking will be downloaded and loaded in [data](./data) based on given config.
 
