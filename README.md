@@ -68,5 +68,9 @@ benchmark.bat CPU
 
 Benchmark is done with latest opencv-python & opencv-contrib-python (current 4.10.0) on the following platforms. Some models are excluded because of support issues.
 
+All models in 'models' are from [opencv zoo](https://github.com/opencv/opencv_zoo).
+
+You also can add your own model to 'custom_models' directory, extend the benchmark on your own model very easily.
+
 ### XXX Device
 TODO  
