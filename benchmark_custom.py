@@ -152,6 +152,7 @@ if __name__ == '__main__':
             print("backend={}".format(backend_str.split(".")[1]))
     if not args.not_print_header:
         print("{:<10} {:<10} {:<10} {:<12} {}".format("mean", "median", "min", "input size", "model"))
+
     for cfg in cfgs:
         # Instantiate benchmark
         benchmark = Benchmark(**cfg['Benchmark'])

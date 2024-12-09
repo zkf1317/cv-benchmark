@@ -1,0 +1,16 @@
+Benchmark:
+  name: "CV Detection Benchmark"
+  type: "Detection"
+  data:
+    path: "custom_models/industry_detection_cv"
+    files: ["1.jpg"]
+    sizes:
+      - [4064, 2968]
+  metric:
+    warmup: 1
+    repeat: 10
+  backend: "default"
+  target: "cpu"
+
+Model:
+  name: "IndustryDetection"

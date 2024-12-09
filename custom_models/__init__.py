@@ -3,6 +3,7 @@ import glob
 import os
 
 from .object_detection_yolov8.yolov8 import YoloV8
+from .industry_detection_cv.cv import IndustryDetection
 
 class ModuleRegistery:
     def __init__(self, name):
@@ -64,3 +65,4 @@ class ModuleRegistery:
 
 CustomModels = ModuleRegistery('Models')
 CustomModels.register(YoloV8)
+CustomModels.register(IndustryDetection)
