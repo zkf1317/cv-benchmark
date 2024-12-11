@@ -3,7 +3,7 @@ Benchmark:
   type: "Detection"
   data:
     path: "custom_models/object_detection_yoloobb"
-    files: ["1.jpg"]
+    files: ["1.jpg", "small.jpg"]
     sizes:
       - [1024, 1024]
   metric:
