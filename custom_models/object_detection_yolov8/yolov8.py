@@ -26,11 +26,15 @@ class YoloV8:
     def name(self):
         return self.__class__.__name__
 
-    def setBackend(self, backendId):
-        self.backendId = backendId
-
     def initialize_model(self, path):
-        self.session = onnxruntime.InferenceSession(path, providers=onnxruntime.get_available_providers())
+        if self.backendId == ModelInferBackend.CUDA:
+            providers = ['CUDAExecutionProvider']
+        else:
+            providers = ['CPUExecutionProvider']
+
+        self.session = onnxruntime.InferenceSession(path, providers=providers)
+        # print(f"inference providers = {self.session.get_providers()}")
+
         # Get model info
         self.get_input_details()
         self.get_output_details()

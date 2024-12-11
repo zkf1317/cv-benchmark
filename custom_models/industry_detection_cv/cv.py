@@ -14,15 +14,12 @@ class GoldenFingerItem:
     golden_finger_box: Any
 
 class IndustryDetection:
-    def __init__(self, backendId = ModelInferBackend.CPU) -> None:
-        pass
+    def __init__(self, model_path, backendId = ModelInferBackend.CPU) -> None:
+        self.backendId = backendId
 
     @property
     def name(self):
         return self.__class__.__name__
-
-    def setBackend(self, backendId):
-        self.backendId = backendId
 
     def infer(self, img):
         gold_finger_begin = np.array([8, 67, 104])  # hsv

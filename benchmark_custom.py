@@ -90,8 +90,6 @@ class Benchmark:
         self._backend = backend_id
 
     def run(self, model):
-        model.setBackend(self._backend)
-
         for idx, data in enumerate(self._dataloader):
             filename, input_data = data[:2]
 
@@ -170,8 +168,8 @@ if __name__ == '__main__':
         if args.fp32 or args.fp16 or args.int8 or args.int8bq:
             if args.fp32:
                 _model_paths += model_paths['fp32']
-            # if args.fp16:
-            #     _model_paths += model_paths['fp16']
+            if args.fp16:
+                _model_paths += model_paths['fp16']
             # if args.int8:
             #     _model_paths += model_paths['int8']
             # if args.int8bq:
@@ -196,7 +194,7 @@ if __name__ == '__main__':
         _model_paths = _model_paths_excluded
 
         for model_path in _model_paths:
-            model = model_handler(*model_path, **model_config)
+            model = model_handler(*model_path, **model_config, backendId=benchmark._backend)
             # Format model_path
             for i in range(len(model_path)):
                 model_path[i] = model_path[i].split('/')[-1]
