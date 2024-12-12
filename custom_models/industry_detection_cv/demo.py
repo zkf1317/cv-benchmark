@@ -38,7 +38,7 @@ if __name__=='__main__':
     args = parser.parse_args()
 
     backend_id = backend_target[args.backend_target]
-    model_net = IndustryDetection(backendId=backend_id)
+    model_net = IndustryDetection("", backendId=backend_id)
 
     tm = cv.TickMeter()
     tm.reset()
