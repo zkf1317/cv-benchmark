@@ -68,6 +68,18 @@ python benchmark_custom.py --cfg ./custom_config/object_detection_yolov8.yaml
 benchmark.bat CPU
 ```
 
+## Run benchmark in container
+
+```shell
+git clone https://github.com/zkf1317/cv-benchmark.git
+cd cv-benchmark
+# start container
+docker run -it -v $PWD:/workspace zkf1317/onnxruntime:cu118-py38-opencv4.10.0-torch2.4.1-ubuntu20.04 bash
+
+# run benchmark
+cd /workspace && python3 benchmark_custom.py --all --cfg_overwrite_backend_target 1
+```
+
 ## Detailed Results
 
 Benchmark is done with latest opencv-python & opencv-contrib-python (current 4.10.0) on the following platforms. Some models are excluded because of support issues.
