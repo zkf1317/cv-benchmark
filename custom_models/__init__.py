@@ -5,6 +5,7 @@ import os
 from .object_detection_yolov8.yolov8 import YoloV8
 from .industry_detection_cv.cv import IndustryDetection
 from .object_detection_yoloobb.yoloobbdet import YoloObbDet
+from .object_detection_yoloworld.yoloworld import YOLOWorld
 
 class ModuleRegistery:
     def __init__(self, name):
@@ -68,3 +69,4 @@ CustomModels = ModuleRegistery('Models')
 CustomModels.register(YoloV8)
 CustomModels.register(IndustryDetection)
 CustomModels.register(YoloObbDet)
+CustomModels.register(YOLOWorld)
